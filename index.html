@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#070812" />
     <meta name="description" content="Creator Circuit HQ turns live creator moments into multilingual media, products, and permission-based managed growth systems." />
+    <script>
+      (function restorePagesRoute(location) {
+        if (location.search.length > 1 && location.search[1] === '/') {
+          var route = location.search
+            .slice(1)
+            .split('&')
+            .map(function decodeSegment(segment) { return segment.replace(/~and~/g, '&'); })
+            .join('?');
+          window.history.replaceState(null, '', location.pathname.slice(0, -1) + route + location.hash);
+        }
+      }(window.location));
+    </script>
     <title>Creator Circuit HQ | Multilingual Creator Media & Services</title>
     <script type="module" crossorigin src="/creator-circuit-site/assets/index-CLlvvhyd.js"></script>
     <link rel="stylesheet" crossorigin href="/creator-circuit-site/assets/index-CNquX-SJ.css">
